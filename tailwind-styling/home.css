@@ -1,0 +1,364 @@
+@import 'tailwindcss';
+@import './index.css';
+
+.section {
+    @apply px-10;
+}
+
+.content-container {
+    @apply w-full max-w-desktop mx-auto;
+}
+
+/* Hero Section Styling */
+
+.hero {
+    @apply min-h-[calc(100dvh_-_100px)] px-10 flex flex-col;
+}
+
+.hero .container {
+    @apply flex-1 flex gap-10;
+}
+
+.hero .container .left {
+    @apply flex-1 py-20 flex flex-col justify-end gap-24;
+}
+
+.hero .container .left .write-up {
+    @apply flex flex-col gap-6;
+}
+
+.hero .container .left .write-up h1 {
+    @apply text-6xl font-bold max-w-[16ch] text-main-dark;
+}
+
+.hero .container .left .write-up p {
+    @apply text-base font-normal max-w-[54ch];
+}
+
+.hero .container .left .cta-btns {
+    @apply flex items-center gap-4;
+}
+
+.hero .container .left .cta-btns .cta {
+    @apply flex items-center justify-center h-12 rounded-full bg-main border border-main text-main-light font-semibold px-6 whitespace-nowrap text-sm;
+}
+
+.hero .container .left .cta-btns .cta:last-child {
+    @apply bg-transparent text-main;
+}
+
+.hero .container .right {
+    @apply flex-1 relative flex;
+}
+
+.hero .container .right .images {
+    @apply absolute bottom-0 right-0 w-fit h-full before:absolute before:bottom-16 before:left-0 before:w-full before:aspect-square before:rounded-full before:bg-secondary;
+}
+
+.hero .container .right .images img {
+    @apply relative w-auto h-full block;
+}
+
+.hero .container .right .images .decoration {
+    @apply absolute w-20 flex items-center justify-center text-main-light text-3xl aspect-square rounded-full bg-gradient-to-b from-main to-main-dark;
+}
+
+.hero .container .right .images .decoration:nth-child(1) {
+    @apply bottom-80 left-0;
+}
+
+.hero .container .right .images .decoration:nth-child(2) {
+    @apply bottom-10 left-10 w-14 text-xl;
+}
+
+.hero .container .right .images .decoration:nth-child(3) {
+    @apply bottom-50 -right-6 w-16 text-2xl;
+}
+
+.short-info {
+    @apply px-10 bg-main-light text-main-dark;
+}
+
+.short-info .info-container {
+    @apply py-8 flex flex-col items-center justify-center gap-3;
+}
+
+.short-info .info-container h3 {
+    @apply text-2xl font-bold;
+}
+
+.short-info .info-container a {
+    @apply flex items-center justify-center gap-1 pl-4 pr-3 h-10 font-semibold text-sm rounded-full bg-main-dark text-main-light;
+}
+
+.short-info .info-container a i {
+    @apply text-[1.8rem];
+}
+
+/* More Details Styling */
+
+.more-details {
+    @apply px-10;
+}
+
+.more-details .container {
+    @apply pt-20 pb-24;
+}
+
+.more-details .container .write-up {
+    @apply grid grid-cols-2 gap-6;
+}
+
+.more-details .container .write-up .titles {
+    @apply flex-1 flex flex-col gap-3;
+}
+
+.more-details .container .write-up .titles h4 {
+    @apply text-sm font-semibold text-main uppercase;
+}
+
+.more-details .container .write-up .titles h2 {
+    @apply text-5xl font-bold text-main-dark;
+}
+
+.more-details .container .write-up .description {
+    @apply flex flex-col gap-10;
+}
+
+.more-details .container .write-up .description a {
+    @apply h-12 w-fit px-6 flex items-center justify-center rounded-full bg-main text-background font-semibold text-sm;
+}
+
+.more-details .container .solutions {
+    @apply grid grid-cols-2 gap-6 mt-20;
+}
+
+.more-details .container .solutions li {
+    @apply flex;
+}
+
+.more-details .container .solutions a {
+    @apply flex-1 rounded-3xl border border-main-light overflow-hidden;
+}
+
+.more-details .container .solutions a img {
+    @apply h-80 bg-main-light w-full object-cover rounded-2xl;
+}
+
+.more-details .container .solutions a .text {
+    @apply p-8 flex flex-col justify-between gap-8;
+}
+
+.more-details .container .solutions a .text .titles {
+    @apply flex flex-col gap-4;
+}
+
+.more-details .container .solutions a .text .titles h4 {
+    @apply text-base font-semibold text-main;
+}
+
+.more-details .container .solutions a .text .titles p {
+    @apply text-3xl font-bold text-main-dark;
+}
+
+.more-details .container .solutions a .text span {
+    @apply h-10 w-fit px-6 rounded-full flex items-center justify-center bg-main-light/50 text-main font-semibold text-sm group-hover:bg-main-light;
+}
+
+/* Features Section Styling */
+
+.features .container {
+    @apply grid grid-cols-2 gap-6 pb-24;
+}
+
+.features .container .title h2 {
+    @apply sticky top-16 pt-10 text-4xl font-bold text-main-dark;
+}
+
+.features .container .features-list {
+    @apply pt-40 flex flex-col gap-8
+}
+
+.features .container .features-list li {
+    @apply flex;
+}
+
+.features .container .features-list li a {
+    @apply flex-1 flex flex-col;
+}
+
+.features .container .features-list li a .image-container {
+    @apply relative mx-8 h-80 object-cover;
+}
+
+.features .container .features-list li a .image-container img {
+    @apply w-full h-full object-cover rounded-2xl border-3 border-main-light;
+}
+
+.features .container .features-list li a .text {
+    @apply -mt-14 pt-24 p-8 pb-10 flex flex-col justify-between gap-8 rounded-3xl bg-main-light;
+}
+
+.features .container .features-list li a .text .titles {
+    @apply flex flex-col gap-4;
+}
+
+.features .container .features-list li a .text .titles h3 {
+    @apply text-4xl font-bold text-main-dark;
+}
+
+.features .container .features-list li a .text .see-more-link {
+    @apply w-fit flex items-center justify-center gap-1 text-sm font-semibold text-main;
+}
+
+.features .container .features-list li a .text .see-more-link i {
+    @apply text-[1.6rem];
+}
+
+.features .container .cta {
+    @apply mt-12 flex flex-col items-center justify-center gap-10 text-center;
+}
+
+.features .container .cta p {
+    @apply text-sm max-w-[56ch];
+}
+
+.features .container .cta a {
+    @apply h-12 px-6 w-fit flex items-center justify-center bg-main text-background text-sm font-semibold rounded-full;
+}
+
+/* Testimonials Section Styling */
+
+.testimonials {
+    @apply px-10 py-24;
+}
+
+.testimonials .container {
+    @apply max-w-[1320px] p-10 mx-auto w-full bg-main-dark overflow-hidden text-white rounded-[40px];
+}
+
+.testimonials .container .title-and-controls {
+    @apply flex items-start justify-between gap-6;
+}
+
+.testimonials .container .title-and-controls h2 {
+    @apply text-4xl font-bold;
+}
+
+.testimonials .container .title-and-controls .controls {
+    @apply flex items-center gap-6;
+}
+
+.testimonials .container .title-and-controls .controls button {
+    @apply w-14 aspect-square rounded-full flex items-center justify-center border-3 border-main-light text-[1.6rem] text-main-light hover:bg-main-light hover:text-main-dark;
+}
+
+.testimonials .container .testimonials-list {
+    @apply mt-10 flex gap-5;
+}
+
+.testimonials .container .testimonials-list li {
+    @apply relative p-6 min-w-90 min-h-124 rounded-3xl bg-gradient-to-b from-main/10 to-main/80 overflow-hidden;
+}
+
+.testimonials .container .testimonials-list .testimonial {
+    @apply flex flex-col gap-6;
+}
+
+.testimonials .container .testimonials-list .testimonial .image-container {
+    @apply min-h-50 rounded-xl bg-main/40 overflow-hidden;
+}
+
+.testimonials .container .testimonials-list .testimonial .image-container img {
+    @apply w-full h-full object-cover opacity-90;
+}
+
+.testimonials .container .testimonials-list .testimonial:nth-child(1) .text {
+    @apply flex-1 flex flex-col justify-between gap-6;
+}
+
+.testimonials .container .testimonials-list .testimonial .text .staff-details h4 {
+    @apply font-semibold;
+}
+
+.testimonials .container .testimonials-list .testimonial .text .staff-details p {
+    @apply text-background/70;
+}
+
+.testimonials .container .testimonials-list .testimonial:nth-child(1) .text span {
+    @apply px-10 h-12 text-sm w-fit flex items-center justify-center rounded-full bg-main-light/20 font-semibold group-hover:bg-main-light group-hover:text-main-dark;
+}
+
+.testimonials .container .testimonials-list .testimonial i {
+    @apply text-main-light text-[2rem];
+}
+
+.testimonials .container .testimonials-list .testimonial .company-logo {
+    @apply h-14 w-fit;
+}
+
+.testimonials .container .testimonials-list .testimonial .quote {
+    @apply text-2xl font-semibold flex-1 flex items-center;
+}
+
+.testimonials .container .testimonials-list .testimonial .background {
+    @apply absolute top-10 left-20 w-full h-full block;
+}
+
+.testimonials .container .testimonials-list .testimonial .background img {
+    @apply w-full h-full object-cover opacity-60;
+}
+
+.testimonials .container .testimonials-list .testimonial:nth-child(3) .text {
+    @apply flex-1 relative flex flex-col justify-between gap-6;
+}
+
+.testimonials .container .testimonials-list .testimonial:nth-child(3) .text span {
+    @apply w-fit flex gap-2 items-center justify-center text-sm font-semibold text-main-light;
+}
+
+.testimonials .container .testimonials-list .testimonial:nth-child(3) .text span i {
+    @apply text-[1.6rem];
+}
+
+/* Call-To-Action Section */
+
+.cta-section .container {
+    @apply pt-10;
+}
+
+.cta-section .container .title {
+    @apply text-4xl font-bold text-main-dark;
+}
+
+.cta-section .container .actions {
+    @apply mt-12 grid grid-cols-[3fr_2fr] gap-6;
+}
+
+.cta-section .container .actions .action {
+    @apply p-6 rounded-3xl border border-main-light bg-white flex flex-col gap-10;
+}
+
+.cta-section .container .actions .action .icon {
+    @apply w-16 text-[2rem] flex items-center justify-center aspect-square rounded-xl bg-main-light text-main-dark;
+}
+
+.cta-section .container .actions .action .text {
+    @apply flex-1 justify-between flex flex-col gap-4;
+}
+
+.cta-section .container .actions .action .text .titles h3 {
+    @apply text-3xl font-bold text-main-dark;
+}
+
+.cta-section .container .actions .action .text .titles {
+    @apply flex-1 flex flex-col gap-4
+}
+
+.cta-section .container .actions .action .text a {
+    @apply h-12 w-fit flex items-center justify-center px-8 rounded-full border-2 border-main text-main hover:bg-main hover:text-background text-sm font-semibold;
+}
+
+.cta-section .container .extra-details {
+    @apply mt-24 py-13 border-t border-main-light text-sm;
+}

@@ -1,0 +1,197 @@
+@import 'tailwindcss';
+
+
+@theme inline {
+    --max-width-desktop: 1240px;
+
+    --color-icon: #9BC620;
+    --color-main: #622FB4;
+    --color-main-dark: #160f41;
+    --color-main-light: #e7e0f4;
+    --color-main-variant: #4E2D82;
+    --color-background: #ffffff;
+    --color-secondary: #9BC620;
+    --color-secondary-dark: #0F8A07;
+}
+
+button {
+    @apply cursor-pointer;
+}
+
+.body {
+    @apply bg-background antialiased;
+}
+
+
+/* 1. Utility Bar Styling */
+
+.utility-bar {
+    @apply h-10 bg-main-dark text-background px-10 w-full;
+}
+
+.utility-bar .links {
+    @apply mx-auto max-w-desktop w-full h-full flex justify-end items-center gap-8;
+}
+
+.utility-bar .links a {
+    @apply flex items-center justify-center h-8 rounded-full font-semibold hover:text-main-light;
+}
+
+/* HEADER STYLING */
+
+/* Desktop Header Styling */
+
+.header {
+    @apply sticky top-0 z-1;
+}
+
+.desktop-header {
+    @apply px-10 bg-background border-b border-main-light;
+}
+
+.desktop-header .nav-container {
+    @apply mx-auto max-w-desktop w-full h-14 flex items-center justify-between gap-8;
+}
+
+.desktop-header .left {
+    @apply flex items-center gap-6
+}
+
+.desktop-header .left .logo {
+    @apply flex items-center gap-0.5 text-lg font-light;
+}
+
+.desktop-header .left .logo img {
+    @apply w-6 h-auto;
+}
+
+.desktop-header .left .logo b {
+    @apply font-semibold;
+}
+
+.desktop-header .left .nav-links {
+    @apply flex items-center gap-6;
+}
+
+.desktop-header .left .nav-links a {
+    @apply text-sm h-12 flex items-center justify-center relative hover:text-main before:absolute before:bottom-0 before:left-0 before:w-full before:h-0.5 hover:before:bg-main;
+}
+
+.desktop-header .right .request-demo-btn {
+    @apply h-10 rounded-full px-6 border-2 border-main-light text-main text-sm font-semibold;
+}
+
+
+/* Footer styling */
+
+.footer {
+    @apply bg-main-dark text-background;
+}
+
+.footer .nav-links-container {
+    @apply py-20 grid grid-cols-[3fr_2fr] gap-20;
+}
+
+.footer .container .nav-links {
+    @apply flex-1 grid grid-cols-2;
+}
+
+.footer .container .nav-links h3 {
+    @apply font-semibold text-lg;
+}
+
+.footer .container .nav-links .links {
+    @apply mt-4 text-base flex flex-col gap-3;
+}
+
+.footer .container .newsletter {
+    @apply flex-1 flex flex-col gap-6 w-full
+}
+
+.footer .container .newsletter .titles {
+    @apply flex flex-col gap-4;
+}
+
+.footer .container .newsletter .titles h3 {
+    @apply font-bold text-3xl;
+}
+
+.footer .container .newsletter .titles p {
+    @apply text-base max-w-[24ch] text-main-light;
+}
+
+.footer .container .newsletter .field {
+    @apply flex max-w-100 border-3 border-main/80 bg-main-light/20 rounded-full has-[input:focus]:border-main;
+}
+
+.footer .container .newsletter .field input {
+    @apply h-14 flex-1 px-6 text-base text-background focus:outline-none focus:border-none;
+}
+
+.footer .container .newsletter .field button {
+    @apply h-14 px-8 rounded-full text-base font-semibold bg-main text-background;
+}
+
+.footer .socials-section {
+    @apply px-10 border-t border-main-light/20;
+}
+
+.footer .socials-section .content-container {
+    @apply grid grid-cols-[3fr_2fr] gap-20 py-6;
+}
+
+.footer .socials-section .content-container .left {
+    @apply flex items-center justify-start;
+}
+
+.footer .socials-section .content-container .logo {
+    @apply flex items-center gap-0.5;
+}
+
+.footer .socials-section .content-container .logo img {
+    @apply w-6 h-auto;
+}
+
+.footer .socials-section .content-container .right {
+    @apply flex items-center gap-10;
+}
+
+.footer .socials-section .content-container .right .socials {
+    @apply flex items-center gap-4;
+}
+
+.footer .socials-section .content-container .right .socials a {
+    @apply flex items-center justify-center w-10 aspect-square rounded-full border-2 border-main-light/40 hover:border-main-light hover:bg-main-light text-main-light hover:text-main-dark;
+}
+
+.footer .socials-section .content-container .right .cta-btn {
+    @apply h-10 w-fit px-6 flex items-center justify-center rounded-full text-sm font-semibold bg-main-light text-main-dark whitespace-nowrap;
+}
+
+.cookie-prompt {
+    @apply bg-main text-background sticky bottom-0 px-10 py-6;
+}
+
+.cookie-prompt .container {
+    @apply max-w-desktop w-full mx-auto grid grid-cols-[1fr_auto];
+}
+
+.cookie-prompt .container .left {
+    @apply flex flex-col gap-4;
+}
+
+.cookie-prompt .container .left h3 {
+    @apply font-semibold;
+}
+
+.cookie-prompt .container .right {
+    @apply flex flex-col gap-1;
+}
+
+.cookie-prompt .container .right button {
+    @apply h-10 px-6 w-fit min-w-50 flex items-center justify-center text-sm font-semibold rounded-full text-background bg-main;
+}
+
+.cookie-prompt .container .right button:last-child {
+    @apply bg-secondary-dark;
+}
