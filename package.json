@@ -1,0 +1,17 @@
+{
+  "name": "medical-website-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:home": "npx @tailwindcss/cli -i ./tailwind-styling/home.css -o ./src/style/home.css --watch",
+    "build:index": "npx @tailwindcss/cli -i ./tailwind-styling/index.css -o ./src/style/index.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emmanuel Ezema",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "tailwindcss": "^4.1.11",
+    "@tailwindcss/cli": "^4.1.11"
+  }
+}
