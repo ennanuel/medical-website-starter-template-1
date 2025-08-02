@@ -12,6 +12,8 @@
     --color-background: #ffffff;
     --color-secondary: #9BC620;
     --color-secondary-dark: #0F8A07;
+
+    --font-raleway: "Raleway", "Inter", sans-serif;
 }
 
 button {
@@ -19,7 +21,7 @@ button {
 }
 
 .body {
-    @apply bg-background antialiased;
+    @apply bg-background font-raleway  antialiased;
 }
 
 
@@ -78,7 +80,7 @@ button {
 }
 
 .desktop-header .right .request-demo-btn {
-    @apply h-10 rounded-full px-6 border-2 border-main-light text-main text-sm font-semibold;
+    @apply h-10 flex items-center justify-center rounded-full px-6 border-2 border-main-light bg-main-light text-main text-sm font-semibold;
 }
 
 
@@ -169,7 +171,7 @@ button {
 }
 
 .cookie-prompt {
-    @apply bg-main text-background sticky bottom-0 px-10 py-6;
+    @apply bg-main text-background sticky bottom-0 px-10 py-6 border-t border-main-light/30;
 }
 
 .cookie-prompt .container {
@@ -194,4 +196,14 @@ button {
 
 .cookie-prompt .container .right button:last-child {
     @apply bg-secondary-dark;
+}
+
+/* Section Styling */
+
+.section {
+    @apply px-10;
+}
+
+.content-container {
+    @apply w-full max-w-desktop mx-auto;
 }
