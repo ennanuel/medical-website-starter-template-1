@@ -1,0 +1,178 @@
+@import 'tailwindcss';
+@import './index.css';
+
+.desktop-header {
+    @apply bg-main text-white border-main-light/40;
+}
+
+.desktop-header .left .nav-links a {
+    @apply hover:text-main-light hover:before:bg-main-light;
+}
+
+/* Hero Styling */
+
+.hero {
+    @apply bg-main text-white min-h-[calc(100dvh_-_80px)] pt-24 pb-10;
+}
+
+.hero .content-container {
+    @apply flex flex-col gap-12;
+}
+
+.hero .content-container .main-content {
+    @apply flex;
+}
+
+.hero .content-container .left {
+    @apply flex flex-1 flex-col justify-end;
+}
+
+.hero .content-container .left .sub-title {
+    @apply text-sm uppercase font-semibold text-main-light;
+}
+
+.hero .content-container .left .title {
+    @apply mt-2 text-6xl font-bold max-w-[24ch];
+}
+
+.hero .content-container .left .description {
+    @apply mt-8 text-base font-normal max-w-[56ch];
+}
+
+.hero .content-container .right {
+    @apply flex-1 flex justify-end items-end;
+}
+
+.hero .content-container .right img {
+    @apply w-full max-w-140 h-100 rounded-4xl rounded-br-lg;
+}
+
+.hero .content-container .scroll-down-content a {
+    @apply flex items-center justify-center w-fit gap-4 font-semibold text-sm;
+}
+
+/* Description Section Styling */
+
+.description-section {
+    @apply bg-main-light text-main-dark;
+}
+
+.description-section .content-container {
+    @apply py-20;
+}
+
+.description-section .content-container .title {
+    @apply text-3xl font-semibold text-main;
+}
+
+.description-section .content-container .description-and-values {
+    @apply mt-8 flex justify-between gap-10;
+}
+
+.description-section .content-container .description-and-values .value {
+    @apply p-6 pt-4 flex flex-col gap-4 rounded-md bg-main text-white w-full max-w-fit;
+}
+
+.description-section .content-container .description-and-values .value h3 {
+    @apply text-xl font-semibold text-white;
+}
+
+.description-section .content-container .description-and-values .value ul {
+    @apply flex flex-col gap-1;
+}
+
+.description-section .content-container .description-and-values .value ul li {
+    @apply flex gap-3 py-2 text-sm border-b last:border-b-0 border-main-light/40;
+}
+
+.description-section .content-container .description-and-values .value ul li i {
+    @apply w-6 h-6 text-main-light;
+}
+
+.description-section .content-container .description-and-values .value ul li span {
+    @apply flex-1;
+}
+
+
+/* Vision and Mission Section Styling */
+
+.vision-and-mission .content-container {
+    @apply pt-24 pb-20
+}
+
+.vision-and-mission .content-container .title-and-sub-title {
+    @apply flex flex-col items-center gap-2;
+}
+
+.vision-and-mission .content-container .title-and-sub-title .sub-title {
+    @apply text-sm uppercase font-semibold text-main;
+}
+
+.vision-and-mission .content-container .title-and-sub-title .title {
+    @apply text-4xl font-semibold text-main-dark;
+}
+
+.vision-and-mission .content-container .statements {
+    @apply mt-14 grid grid-cols-[4fr_3fr_4fr] gap-2;
+}
+
+.vision-and-mission .content-container .statement {
+    @apply p-8 my-8 h-100 flex flex-col justify-center items-start gap-6 rounded-l-2xl rounded-r-md last:rounded-r-2xl last:rounded-l-md bg-main/30 text-main-dark last:bg-secondary/30 last:text-secondary-dark;
+}
+
+.vision-and-mission .content-container .statement h3 {
+    @apply text-2xl font-semibold;
+}
+
+.vision-and-mission .content-container .image img {
+    @apply w-full h-full object-cover rounded-md;
+}
+
+/* Contact Section Styling */
+
+.contact.section {
+    @apply pt-24 pb-20;
+}
+
+.contact .content-container {
+    @apply flex flex-col items-center justify-center gap-12 bg-gradient-to-br from-main to-main-dark text-white rounded-2xl py-20  px-10;
+}
+
+.contact .content-container .title-and-description {
+    @apply flex flex-col items-center justify-center gap-6 text-center;
+}
+
+.contact .content-container .title-and-description h3 {
+    @apply text-6xl font-bold;
+}
+
+.contact .content-container .title-and-description p {
+    @apply text-base max-w-[72ch];
+}
+
+.contact .content-container .cta {
+    @apply flex items-center justify-center w-fit px-6 gap-4 font-semibold h-12 rounded-full bg-main-light text-main;
+}
+
+
+/* More Resources Section */
+
+.more-resources .content-container {
+    @apply pb-16 flex flex-col items-center justify-center;
+}
+
+.more-resources .content-container h2 {
+    @apply text-xl font-semibold text-main;
+}
+
+.more-resources .content-container ul {
+    @apply mt-6 grid grid-cols-4 w-fit gap-3;
+}
+
+.more-resources .content-container ul li a {
+    @apply p-4 text-sm text-main font-semibold flex flex-col gap-1 text-center w-full aspect-square bg-main-light/50 hover:bg-main-light rounded-md items-center justify-center;
+}
+
+.more-resources .content-container ul li a i {
+    @apply text-2xl;
+}
