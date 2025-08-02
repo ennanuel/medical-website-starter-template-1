@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build:about": "npx @tailwindcss/cli -i ./tailwind-styling/about.css -o ./src/style/about.css --watch",
     "build:home": "npx @tailwindcss/cli -i ./tailwind-styling/home.css -o ./src/style/home.css --watch",
-    "build:index": "npx @tailwindcss/cli -i ./tailwind-styling/index.css -o ./src/style/index.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Emmanuel Ezema",
