@@ -1,14 +1,6 @@
 @import 'tailwindcss';
 @import './index.css';
 
-.section {
-    @apply px-10;
-}
-
-.content-container {
-    @apply w-full max-w-desktop mx-auto;
-}
-
 /* Hero Section Styling */
 
 .hero {
