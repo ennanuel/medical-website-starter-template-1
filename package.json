@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "build:about": "npx @tailwindcss/cli -i ./tailwind-styling/about.css -o ./src/style/about.css --watch",
+    "build:contact": "npx @tailwindcss/cli -i ./tailwind-styling/contact.css -o ./src/style/contact.css --watch",
     "build:home": "npx @tailwindcss/cli -i ./tailwind-styling/home.css -o ./src/style/home.css --watch",
+    "build:product": "npx @tailwindcss/cli -i ./tailwind-styling/product.css -o ./src/style/product.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Emmanuel Ezema",
