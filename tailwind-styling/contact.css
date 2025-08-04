@@ -1,0 +1,241 @@
+@import './index.css';
+
+.desktop-header {
+    @apply bg-main text-background border-main-light/10;
+}
+
+.desktop-header .left .nav-links li a {
+    @apply hover:text-main-light hover:before:bg-main-light;
+}
+
+/* Hero Styling */
+
+.hero {
+    @apply bg-main text-background;
+}
+
+.hero .content-container {
+    @apply pt-24 flex justify-between gap-16;
+}
+
+.hero .content-container .left {
+    @apply flex flex-col gap-16 pb-16;
+}
+
+.hero .content-container .left .title-and-description {
+    @apply flex flex-col gap-6;
+}
+
+.hero .content-container .left .title-and-description h3 {
+    @apply text-sm font-semibold text-main-light uppercase;
+}
+
+.hero .content-container .left .title-and-description h2 {
+    @apply text-6xl font-bold;
+}
+
+.hero .content-container .left .title-and-description p {
+    @apply max-w-[40ch];
+}
+
+.hero .content-container .left .points {
+    @apply flex flex-col gap-4;
+}
+
+.hero .content-container .left .points h4 {
+    @apply text-base font-semibold text-main-light;
+}
+
+.hero .content-container .left .points ul {
+    @apply flex flex-col gap-2;
+}
+
+.hero .content-container .left .points ul li {
+    @apply flex items-center gap-2 text-sm;
+}
+
+.hero .content-container .left .points ul li i {
+    @apply text-base text-main-light;
+}
+
+.hero .content-container .right {
+    @apply flex-1 max-w-140;
+}
+
+.hero .content-container .right form {
+    @apply -mb-24 p-10 w-full flex flex-col gap-6 bg-background rounded-2xl outline-2 outline-main-dark text-main-dark;
+}
+
+.hero .content-container .right form .title {
+    @apply text-xl font-semibold text-main;
+}
+
+.hero .content-container .right form .fields-and-button {
+    @apply mt-2 flex flex-col gap-4;
+}
+
+.hero .content-container .right form .fields-and-button .input-field {
+    @apply text-sm px-4 min-h-12 rounded-lg bg-main-light/60 focus:bg-main-light text-main-dark placeholder:text-main-dark/50 focus:outline-none;
+}
+
+.hero .content-container .right form .fields-and-button textarea.input-field {
+    @apply p-4 min-h-30;
+}
+
+.hero .content-container .right form .fields-and-button button {
+    @apply flex gap-4 h-12 items-center justify-center rounded-lg bg-gradient-to-b from-main to-main-dark text-main-light text-sm font-semibold;
+}
+
+.hero .content-container .right form .fields-and-button .terms-check {
+    @apply flex gap-3 text-sm;
+}
+
+.hero .content-container .right form .fields-and-button .terms-check input {
+    @apply mt-0.5 h-fit;
+}
+
+.hero .content-container .right form .fields-and-button .terms-check label {
+    @apply max-w-[48ch];
+}
+
+/* Founder Section Styling */
+
+.message-from-founder {
+    @apply bg-main-light;
+}
+
+.message-from-founder .founder-profile {
+    @apply w-fit py-12 flex flex-col gap-3;
+}
+
+.message-from-founder .founder-profile .profile {
+    @apply mt-2 flex items-center gap-5;
+}
+
+.message-from-founder .founder-profile .profile img {
+    @apply w-14 aspect-square rounded-full border-2 border-main-dark;
+}
+
+.message-from-founder .founder-profile .profile-details {
+    @apply flex flex-col gap-0;
+}
+
+.message-from-founder .founder-profile .profile-details .name {
+    @apply font-semibold text-main-dark;
+}
+
+.message-from-founder .founder-profile .profile-details .role {
+    @apply text-xs;
+}
+
+.message-from-founder .founder-profile .profile-details .role .highlight {
+    @apply text-main;
+}
+
+.message-from-founder .founder-profile .text {
+    @apply max-w-[56ch] text-main-dark/80;
+}
+
+.message-from-founder .founder-profile .icon {
+    @apply flex items-center justify-end text-6xl text-main/20;
+}
+
+/* Offices Section Styling */
+
+.offices .content-container {
+    @apply pt-30 pb-24 flex flex-col gap-10;
+}
+
+.offices .content-container .title-and-sub-title {
+    @apply flex flex-col gap-4 items-center justify-center text-center;
+}
+
+.offices .content-container .title-and-sub-title h3 {
+    @apply text-sm font-semibold uppercase text-main;
+}
+
+.offices .content-container .title-and-sub-title h2 {
+    @apply text-4xl font-semibold text-main-dark max-w-[24ch];
+}
+
+.offices .content-container ul {
+    @apply relative py-10 grid grid-cols-3 gap-8 before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:w-4/5 before:h-full before:rounded-2xl before:bg-main-light;
+}
+
+.offices .content-container ul li {
+    @apply relative p-10 flex flex-col items-center justify-center rounded-xl border-2 border-main-dark bg-white;
+}
+
+.offices .content-container ul li .icon {
+    @apply w-16 flex items-center justify-center aspect-square rounded-full bg-gradient-to-b from-main to-main-dark text-2xl text-main-light;
+}
+
+.offices .content-container ul li h3 {
+    @apply text-lg font-semibold text-main-dark mt-6;
+}
+
+.offices .content-container ul li p {
+    @apply mt-2 text-sm text-main-dark/80;
+}
+
+/* FAQs Section Styling */
+
+.faqs .content-container {
+    @apply pt-20 pb-30;
+}
+
+.faqs .content-container .title-and-description {
+    @apply flex flex-col text-center gap-4;
+}
+
+.faqs .content-container .title-and-description h3 {
+    @apply text-sm font-semibold text-main uppercase;
+}
+
+.faqs .content-container .title-and-description h2 {
+    @apply text-4xl font-semibold text-main-dark;
+}
+
+.faqs .content-container .title-and-description p {
+    @apply text-main-dark;
+}
+
+.faqs .content-container .questions-and-answers {
+    @apply mt-12 flex flex-col justify-center items-center;
+}
+
+.faqs .content-container .questions-and-answers .tab-selector {
+    @apply flex items-center justify-center rounded-full p-1 bg-background border-2 border-main-dark/10 shadow-xl shadow-main-dark/5;
+}
+
+.faqs .content-container .questions-and-answers .tab-selector button {
+    @apply h-10 flex items-center justify-center gap-3 text-sm font-semibold rounded-full px-8 text-main-dark/90;
+}
+
+.faqs .content-container .questions-and-answers .tab-selector button.active {
+    @apply bg-main/10 text-main-dark;
+}
+
+.faqs .content-container .questions-and-answers ul {
+    @apply mt-12 flex flex-col gap-4 w-full max-w-120;
+}
+
+.faqs .content-container .questions-and-answers ul li {
+    @apply border-2 border-main-dark/80 rounded-xl;
+}
+
+.faqs .content-container .questions-and-answers ul li.active {
+    @apply bg-main-light/30;
+}
+
+.faqs .content-container .questions-and-answers ul li button {
+    @apply w-full p-4 flex items-center justify-between gap-6 font-semibold text-main-dark;
+}
+
+.faqs .content-container .questions-and-answers ul li.active p {
+    @apply block;
+}
+
+.faqs .content-container .questions-and-answers ul li p {
+    @apply hidden text-sm text-main-dark pt-0 p-4;
+}
