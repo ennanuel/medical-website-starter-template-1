@@ -2,7 +2,7 @@
 @import './index.css';
 
 .desktop-header {
-    @apply bg-main text-white border-main-light/40;
+    @apply bg-main text-background border-main-light/10;
 }
 
 .desktop-header .left .nav-links a {
@@ -12,7 +12,7 @@
 /* Hero Styling */
 
 .hero {
-    @apply bg-main text-white min-h-[calc(100dvh_-_80px)] pt-24 pb-10;
+    @apply bg-main text-background min-h-[calc(100dvh_-_80px)] pt-24 pb-10;
 }
 
 .hero .content-container {
@@ -70,11 +70,11 @@
 }
 
 .description-section .content-container .description-and-values .value {
-    @apply p-6 pt-4 flex flex-col gap-4 rounded-md bg-main text-white w-full max-w-fit;
+    @apply p-6 pt-4 flex flex-col gap-4 rounded-md bg-main text-background w-full max-w-fit;
 }
 
 .description-section .content-container .description-and-values .value h3 {
-    @apply text-xl font-semibold text-white;
+    @apply text-xl font-semibold text-background;
 }
 
 .description-section .content-container .description-and-values .value ul {
@@ -135,7 +135,7 @@
 }
 
 .contact .content-container {
-    @apply flex flex-col items-center justify-center gap-12 bg-gradient-to-br from-main to-main-dark text-white rounded-2xl py-20  px-10;
+    @apply flex flex-col items-center justify-center gap-12 bg-gradient-to-br from-main to-main-dark text-background rounded-2xl py-20  px-10;
 }
 
 .contact .content-container .title-and-description {
