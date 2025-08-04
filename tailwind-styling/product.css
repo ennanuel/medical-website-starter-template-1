@@ -1,0 +1,327 @@
+
+
+@import './index.css';
+
+.desktop-header {
+    @apply bg-main text-background border-main-light/30;
+}
+
+.desktop-header .left .nav-links li a {
+    @apply hover:text-main-light hover:before:bg-main-light;
+}
+
+/* Hero Section Styling */
+
+.hero {
+    @apply bg-gradient-to-b from-main to-main-dark to-99% text-background;
+}
+
+.hero .content-container {
+    @apply pt-20 pb-40 flex flex-col justify-end min-h-[calc(100vh_-_80px)] gap-12
+}
+
+.hero .content-container .title-and-description {
+    @apply flex flex-col gap-6 justify-center items-center text-center;
+}
+
+.hero .content-container .title-and-description  h3 {
+    @apply text-main-light font-semibold text-sm uppercase;
+}
+
+.hero .content-container .title-and-description  h1 {
+    @apply text-6xl font-bold w-full max-w-[16ch];
+}
+
+.hero .content-container .title-and-description  p {
+    @apply mt-2 max-w-[72ch];
+}
+
+.hero .content-container .cta-btns {
+    @apply flex items-center justify-center gap-2
+}
+
+.hero .content-container .cta-btns a {
+    @apply h-12 w-fit px-8 rounded-full flex items-center justify-center border border-main-light bg-main-light text-main font-semibold text-sm last:text-main-light last:bg-transparent;
+}
+
+.services {
+    @apply bg-main-dark text-main-light;
+}
+
+.services .content-container {
+    @apply pb-20 flex flex-col gap-10;
+}
+
+.services .content-container .title-and-description {
+    @apply flex flex-col gap-4;
+}
+
+.services .content-container .title-and-description h2 {
+    @apply text-2xl font-semibold;
+}
+
+.services .content-container .title-and-description p {
+    @apply max-w-[64ch];
+}
+
+.services .content-container ul {
+    @apply grid grid-cols-3 gap-3;
+}
+
+.services .content-container ul li {
+    @apply flex flex-col gap-3 p-6 rounded-4xl border border-main/30;
+}
+
+.services .content-container i {
+    @apply text-4xl;
+}
+
+.services .content-container h3 {
+    @apply mt-2 text-xl font-semibold;
+}
+
+.services .content-container p {
+    @apply text-sm;
+}
+
+/* Selling Points Styling */
+
+.selling-points {
+    @apply bg-main-light text-main-dark;
+}
+
+.selling-points .content-container {
+    @apply pt-30 pb-20 flex gap-16;
+}
+
+.selling-points .content-container .points {
+    @apply max-w-100 flex flex-col gap-12;
+}
+
+.selling-points .content-container .points li {
+    @apply rounded-2xl border-2 border-main-dark/60 p-6 pt-0 bg-background;
+}
+
+.selling-points .content-container .points li .icon {
+    @apply w-16 -mt-8 aspect-square rounded-full border-2 border-main-dark bg-main-dark text-main-light text-2xl flex items-center justify-center;
+}
+
+.selling-points .content-container .points li h3 {
+    @apply text-xl font-semibold mt-6;
+}
+
+.selling-points .content-container .points li p {
+    @apply text-sm mt-4;
+}
+
+.selling-points .content-container .text-content {
+    @apply flex flex-col justify-center;
+}
+
+.selling-points .content-container .text-content h3 {
+    @apply text-sm font-semibold text-main uppercase;
+}
+
+.selling-points .content-container .text-content h2 {
+    @apply mt-2 text-4xl font-semibold text-main-dark;
+}
+
+.selling-points .content-container .text-content p {
+    @apply mt-8 max-w-[72ch];
+}
+
+.selling-points .content-container .text-content ul {
+    @apply mt-10 flex items-center gap-12;
+}
+
+.selling-points .content-container .text-content ul li {
+    @apply flex items-center gap-2 text-sm;
+}
+
+.selling-points .content-container .text-content ul li i {
+    @apply text-base text-main;
+}
+
+/* Additional Selling Points Styling */
+
+.additional-selling-points .content-container {
+    @apply pt-24 pb-24;
+}
+
+.additional-selling-points .content-container .title-and-sub-title {
+    @apply flex flex-col items-center text-center gap-4;
+}
+
+.additional-selling-points .content-container .title-and-sub-title h3 {
+    @apply text-main text-sm font-semibold uppercase;
+}
+
+.additional-selling-points .content-container .title-and-sub-title h2 {
+    @apply text-main-dark text-4xl font-semibold max-w-[24ch];
+}
+
+.additional-selling-points .content-container .images-and-text {
+    @apply mt-20 flex flex-col items-center gap-16;
+}
+
+.additional-selling-points .content-container .images-and-text .images {
+    @apply flex justify-center items-center gap-3;
+}
+
+.additional-selling-points .content-container .images-and-text .images img {
+    @apply flex-1 max-w-100 rounded-lg h-100 object-cover odd:max-w-60 odd:h-90;
+}
+
+.additional-selling-points .content-container .images-and-text p {
+    @apply text-center max-w-[64ch] text-main-dark;
+}
+
+/* Success Points Styling */
+
+.success-points {
+    @apply py-20;
+}
+
+.success-points .content-container {
+    @apply relative max-w-[calc(var(--max-width-desktop)_+_160px)] p-20 rounded-4xl text-background flex justify-between gap-10 bg-[url(../assets/images/natali-hordiiuk-JxsdF5oc3zY-unsplash.jpg)] overflow-hidden before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-main-dark/50;
+}
+
+.success-points .content-container .left {
+    @apply relative flex flex-col justify-between gap-10;
+}
+
+.success-points .content-container .left .title-and-description {
+    @apply flex flex-col gap-3;
+}
+
+.success-points .content-container .left .title-and-description h3 {
+    @apply text-sm font-semibold text-main-light;
+}
+
+.success-points .content-container .left .title-and-description h2 {
+    @apply text-4xl font-bold max-w-[16ch];
+}
+
+.success-points .content-container .left .title-and-description p {
+    @apply max-w-[40ch];
+}
+
+.success-points .content-container .left .cta {
+    @apply h-12 px-8 text-sm whitespace-nowrap flex items-center justify-center rounded-full bg-main-light text-main font-semibold  w-fit;
+}
+
+.success-points .content-container .right {
+    @apply relative max-w-110 grid grid-rows-4 gap-4;
+}
+
+.success-points .content-container .right li {
+    @apply flex gap-4 p-6 rounded-2xl border border-main-light/20 bg-main/10 backdrop-blur;
+}
+
+.success-points .content-container .right li .icon {
+    @apply text-3xl text-main-light;
+}
+
+.success-points .content-container .right li .text {
+    @apply flex flex-col gap-4;
+}
+
+.success-points .content-container .right li .text h3 {
+    @apply text-xl font-semibold;
+}
+
+.success-points .content-container .right li .text p {
+    @apply text-sm text-main-light;
+}
+
+/* FAQs Section Styling */
+
+.faqs .content-container {
+    @apply pt-20 pb-30;
+}
+
+.faqs .content-container .title-and-description {
+    @apply flex flex-col text-center gap-4;
+}
+
+.faqs .content-container .title-and-description h3 {
+    @apply text-sm font-semibold text-main uppercase;
+}
+
+.faqs .content-container .title-and-description h2 {
+    @apply text-4xl font-semibold text-main-dark;
+}
+
+.faqs .content-container .title-and-description p {
+    @apply text-main-dark;
+}
+
+.faqs .content-container .questions-and-answers {
+    @apply mt-12 flex flex-col justify-center items-center;
+}
+
+.faqs .content-container .questions-and-answers .tab-selector {
+    @apply flex items-center justify-center rounded-full p-1 bg-background border-2 border-main-dark/10 shadow-xl shadow-main-dark/5;
+}
+
+.faqs .content-container .questions-and-answers .tab-selector button {
+    @apply h-10 flex items-center justify-center gap-3 text-sm font-semibold rounded-full px-8 text-main-dark/90;
+}
+
+.faqs .content-container .questions-and-answers .tab-selector button.active {
+    @apply bg-main/10 text-main-dark;
+}
+
+.faqs .content-container .questions-and-answers ul {
+    @apply mt-12 flex flex-col gap-4 w-full max-w-120;
+}
+
+.faqs .content-container .questions-and-answers ul li {
+    @apply border-2 border-main-dark/80 rounded-xl;
+}
+
+.faqs .content-container .questions-and-answers ul li.active {
+    @apply bg-main-light/30;
+}
+
+.faqs .content-container .questions-and-answers ul li button {
+    @apply w-full p-4 flex items-center justify-between gap-6 font-semibold text-main-dark;
+}
+
+.faqs .content-container .questions-and-answers ul li.active p {
+    @apply block;
+}
+
+.faqs .content-container .questions-and-answers ul li p {
+    @apply hidden text-sm text-main-dark pt-0 p-4;
+}
+
+/* CTA Section Styling */
+
+.cta-section {
+    @apply overflow-hidden relative bg-main-dark text-background rounded-t-[40px] after:absolute after:-top-1/4 after:left-0 after:w-full after:max-w-160 after:aspect-square after:rounded-[50%] after:blur-[160px] after:bg-main after:opacity-50;
+}
+
+.cta-section .content-container {
+    @apply relative min-h-[calc(100vh)] py-40 flex flex-col justify-center items-center gap-4;
+}
+
+.cta-section .content-container .title-and-sub-title {
+    @apply flex flex-col justify-center items-center text-center;
+}
+
+.cta-section .content-container .title-and-sub-title h3 {
+    @apply text-base font-semibold text-background relative;
+}
+
+.cta-section .content-container .title-and-sub-title h2 {
+    @apply text-[6rem] font-bold text-main-light;
+}
+
+.cta-section .content-container .cta-btns {
+    @apply flex items-center justify-center gap-4;
+}
+
+.cta-section .content-container .cta-btns a {
+    @apply relative h-12 flex items-center justify-center px-6 rounded-full border border-main-light text-background text-sm font-semibold last:bg-main-light last:text-main-dark;
+}
