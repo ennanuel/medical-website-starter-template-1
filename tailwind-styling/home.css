@@ -1,26 +1,38 @@
 @import 'tailwindcss';
 @import './index.css';
 
+.desktop-header {
+    @apply bg-main text-background border-main-light/10;
+}
+
+.desktop-header .left .nav-links a {
+    @apply hover:text-main-light hover:before:bg-main-light;
+}
+
 /* Hero Section Styling */
 
 .hero {
-    @apply min-h-[calc(100dvh_-_100px)] px-10 flex flex-col;
+    @apply overflow-hidden min-h-[calc(100dvh_-_80px)] px-10 flex flex-col bg-gradient-to-b from-main to-main-dark text-background;
 }
 
 .hero .container {
-    @apply flex-1 flex gap-10;
+    @apply relative flex-1 flex gap-10;
 }
 
 .hero .container .left {
-    @apply flex-1 py-20 flex flex-col justify-end gap-24;
+    @apply relative flex-1 py-20 flex flex-col justify-end gap-20;
 }
 
 .hero .container .left .write-up {
     @apply flex flex-col gap-6;
 }
 
+.hero .container .left .write-up h3 {
+    @apply text-sm font-semibold text-main-light uppercase;
+}
+
 .hero .container .left .write-up h1 {
-    @apply text-6xl font-bold max-w-[16ch] text-main-dark;
+    @apply text-6xl font-bold max-w-[16ch] text-background;
 }
 
 .hero .container .left .write-up p {
@@ -36,7 +48,7 @@
 }
 
 .hero .container .left .cta-btns .cta:last-child {
-    @apply bg-transparent text-main;
+    @apply bg-transparent text-main-light border-main-light;
 }
 
 .hero .container .right {
@@ -44,15 +56,15 @@
 }
 
 .hero .container .right .images {
-    @apply absolute bottom-0 right-0 w-fit h-full before:absolute before:bottom-16 before:left-0 before:w-full before:aspect-square before:rounded-full before:bg-secondary;
+    @apply absolute bottom-0 right-0 w-fit h-full before:absolute before:bottom-16 before:left-0 before:w-full before:aspect-square before:rounded-full before:bg-main before:blur-[160px] before:scale-125 after:z-0 after:absolute after:bottom-16 after:left-0 after:w-full after:aspect-square after:rounded-full after:bg-secondary;
 }
 
 .hero .container .right .images img {
-    @apply relative w-auto h-full block;
+    @apply z-1 relative w-auto h-full block;
 }
 
 .hero .container .right .images .decoration {
-    @apply absolute w-20 flex items-center justify-center text-main-light text-3xl aspect-square rounded-full bg-gradient-to-b from-main to-main-dark;
+    @apply z-1 absolute w-20 flex items-center justify-center text-main-light text-3xl aspect-square rounded-full bg-gradient-to-b from-main to-main-dark shadow-lg shadow-main-dark/20 outline outline-main-light/5;
 }
 
 .hero .container .right .images .decoration:nth-child(1) {
@@ -76,15 +88,15 @@
 }
 
 .short-info .info-container h3 {
-    @apply text-2xl font-bold;
+    @apply text-2xl font-semibold;
 }
 
 .short-info .info-container a {
-    @apply flex items-center justify-center gap-1 pl-4 pr-3 h-10 font-semibold text-sm rounded-full bg-main-dark text-main-light;
+    @apply flex items-center justify-center gap-1 pl-6 pr-3 h-10 font-semibold text-sm rounded-full bg-main-dark text-main-light;
 }
 
 .short-info .info-container a i {
-    @apply text-[1.8rem];
+    @apply text-2xl
 }
 
 /* More Details Styling */
@@ -110,7 +122,7 @@
 }
 
 .more-details .container .write-up .titles h2 {
-    @apply text-5xl font-bold text-main-dark;
+    @apply text-5xl font-semibold text-main-dark;
 }
 
 .more-details .container .write-up .description {
@@ -150,7 +162,7 @@
 }
 
 .more-details .container .solutions a .text .titles p {
-    @apply text-3xl font-bold text-main-dark;
+    @apply text-3xl font-semibold text-main-dark;
 }
 
 .more-details .container .solutions a .text span {
@@ -164,7 +176,7 @@
 }
 
 .features .container .title h2 {
-    @apply sticky top-16 pt-10 text-4xl font-bold text-main-dark;
+    @apply sticky top-16 pt-10 text-4xl font-semibold text-main-dark;
 }
 
 .features .container .features-list {
@@ -196,7 +208,7 @@
 }
 
 .features .container .features-list li a .text .titles h3 {
-    @apply text-4xl font-bold text-main-dark;
+    @apply text-4xl font-semibold text-main-dark;
 }
 
 .features .container .features-list li a .text .see-more-link {
@@ -226,7 +238,7 @@
 }
 
 .testimonials .container {
-    @apply max-w-[1320px] p-10 mx-auto w-full bg-main-dark overflow-hidden text-white rounded-[40px];
+    @apply max-w-[1320px] p-10 mx-auto w-full bg-main-dark overflow-hidden text-background rounded-[40px];
 }
 
 .testimonials .container .title-and-controls {
@@ -315,12 +327,24 @@
 
 /* Call-To-Action Section */
 
-.cta-section .container {
-    @apply pt-10;
+.cta-section {
+    @apply bg-main-light;
 }
 
-.cta-section .container .title {
-    @apply text-4xl font-bold text-main-dark;
+.cta-section .container {
+    @apply py-24;
+}
+
+.cta-section .container .title-and-description {
+    @apply flex flex-col gap-4;
+}
+
+.cta-section .container .title-and-description .title {
+    @apply text-4xl font-semibold text-main-dark;
+}
+
+.cta-section .container .title-and-description p {
+    @apply text-base text-main-dark max-w-[56ch];
 }
 
 .cta-section .container .actions {
@@ -328,11 +352,11 @@
 }
 
 .cta-section .container .actions .action {
-    @apply p-6 rounded-3xl border border-main-light bg-white flex flex-col gap-10;
+    @apply p-6 rounded-xl border-2 border-main-dark/50 bg-background flex flex-col gap-10;
 }
 
 .cta-section .container .actions .action .icon {
-    @apply w-16 text-[2rem] flex items-center justify-center aspect-square rounded-xl bg-main-light text-main-dark;
+    @apply w-16 text-[2rem] flex items-center justify-center aspect-square rounded-xl bg-gradient-to-b from-main to-main-dark text-main-light;
 }
 
 .cta-section .container .actions .action .text {
@@ -340,7 +364,11 @@
 }
 
 .cta-section .container .actions .action .text .titles h3 {
-    @apply text-3xl font-bold text-main-dark;
+    @apply text-2xl font-semibold text-main-dark;
+}
+
+.cta-section .container .actions .action .text .titles p {
+    @apply text-sm;
 }
 
 .cta-section .container .actions .action .text .titles {
@@ -348,7 +376,7 @@
 }
 
 .cta-section .container .actions .action .text a {
-    @apply h-12 w-fit flex items-center justify-center px-8 rounded-full border-2 border-main text-main hover:bg-main hover:text-background text-sm font-semibold;
+    @apply h-12 w-fit flex items-center justify-center px-8 rounded-full border-2 border-main-dark/50 text-main-dark hover:bg-main hover:border-main hover:text-background text-sm font-semibold;
 }
 
 .cta-section .container .extra-details {
