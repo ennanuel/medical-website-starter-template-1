@@ -44,7 +44,7 @@ button {
 /* Desktop Header Styling */
 
 .header {
-    @apply sticky top-0 z-1;
+    @apply sticky top-0 z-2;
 }
 
 .desktop-header {
@@ -106,8 +106,16 @@ button {
     @apply mt-4 text-base flex flex-col gap-3;
 }
 
+.footer .container .nav-links .links li a {
+    @apply w-fit hover:text-main-light;
+}
+
+.footer .container .nav-links .contact-us .links li a {
+    @apply flex gap-3;
+}
+
 .footer .container .newsletter {
-    @apply flex-1 flex flex-col gap-6 w-full
+    @apply flex-1 flex flex-col gap-6 w-full;
 }
 
 .footer .container .newsletter .titles {
@@ -123,15 +131,15 @@ button {
 }
 
 .footer .container .newsletter .field {
-    @apply flex max-w-100 border-3 border-main/80 bg-main-light/20 rounded-full has-[input:focus]:border-main;
+    @apply p-1 flex max-w-100 outline-3 outline-main/80 bg-main-light/10 rounded-full has-[input:focus]:border-main;
 }
 
 .footer .container .newsletter .field input {
-    @apply h-14 flex-1 px-6 text-base text-background focus:outline-none focus:border-none;
+    @apply h-12 flex-1 px-6 text-base text-background focus:outline-none focus:border-none;
 }
 
 .footer .container .newsletter .field button {
-    @apply h-14 px-8 rounded-full text-base font-semibold bg-main text-background;
+    @apply h-12 px-8 rounded-full text-base font-semibold bg-gradient-to-b from-main to-main-dark text-background;
 }
 
 .footer .socials-section {
@@ -170,8 +178,15 @@ button {
     @apply h-10 w-fit px-6 flex items-center justify-center rounded-full text-sm font-semibold bg-main-light text-main-dark whitespace-nowrap;
 }
 
+
+/* Cookie Prompt Styling */
+
 .cookie-prompt {
-    @apply bg-main text-background sticky bottom-0 px-10 py-6 border-t border-main-light/30;
+    @apply hidden bg-main text-background sticky bottom-0 px-10 py-6 border-t border-main-light/30;
+}
+
+.cookie-prompt.show {
+    @apply block;
 }
 
 .cookie-prompt .container {
