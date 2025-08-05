@@ -182,7 +182,7 @@ button {
 /* Cookie Prompt Styling */
 
 .cookie-prompt {
-    @apply hidden bg-main text-background sticky bottom-0 px-10 py-6 border-t border-main-light/30;
+    @apply hidden bg-main text-background sticky z-2 bottom-0 px-10 py-6 border-t border-main-light/30;
 }
 
 .cookie-prompt.show {
