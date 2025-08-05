@@ -258,7 +258,7 @@ button {
 .header {
   position: sticky;
   top: calc(var(--spacing) * 0);
-  z-index: 1;
+  z-index: 2;
 }
 .desktop-header {
   border-bottom-style: var(--tw-border-style);
@@ -555,6 +555,7 @@ button {
 .cookie-prompt {
   position: sticky;
   bottom: calc(var(--spacing) * 0);
+  z-index: 2;
   display: none;
   border-top-style: var(--tw-border-style);
   border-top-width: 1px;

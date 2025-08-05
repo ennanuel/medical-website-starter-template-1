@@ -406,7 +406,7 @@ button {
 .header {
   position: sticky;
   top: calc(var(--spacing) * 0);
-  z-index: 1;
+  z-index: 2;
 }
 .desktop-header {
   border-bottom-style: var(--tw-border-style);
@@ -703,6 +703,7 @@ button {
 .cookie-prompt {
   position: sticky;
   bottom: calc(var(--spacing) * 0);
+  z-index: 2;
   display: none;
   border-top-style: var(--tw-border-style);
   border-top-width: 1px;
@@ -764,7 +765,7 @@ button {
   max-width: 1240px;
 }
 .desktop-header {
-  border-color: color-mix(in oklab, #e7e0f4 40%, transparent);
+  border-color: color-mix(in oklab, #e7e0f4 10%, transparent);
   background-color: #622FB4;
   color: #ffffff;
 }
