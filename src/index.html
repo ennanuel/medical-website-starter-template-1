@@ -28,7 +28,7 @@
         <div class="desktop-header section">
             <nav class="nav-container content-container">
                 <div class="left">
-                    <a href="#" class="logo">
+                    <a href="/" class="logo">
                         <img src="./assets/icons/favicon-32x32.png" alt="Company logo" />
                         <span><b>luna</b>Health</span>
                     </a>
@@ -42,7 +42,22 @@
 
                 <div class="right">
                     <button class="request-demo-btn">Request a demo</button>
+                    <button id="menu-toggle-btn" class="toggle-mobile-header-btn">
+                        <i class="open-icon bi bi-list"></i>
+                        <i class="close-icon bi bi-x"></i>
+                    </button>
                 </div>
+            </nav>
+        </div>
+        <div id="mobile-header" class="mobile-header">
+            <nav class="container">
+                <ul class="nav-links">
+                    <li><a class="active" href="/">Home</a></li>
+                    <li><a href="/about">Who We Are</a></li>
+                    <li><a href="/product">Solutions</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+                <a class="cta-link" href="/contact">Request a demo</a>
             </nav>
         </div>
     </header>
@@ -256,52 +271,60 @@
                 <div class="title-and-controls">
                     <h2>How customers feel about lunaOne</h2>
                     <div class="controls">
-                        <button><i class="bi bi-arrow-left"></i></button>
-                        <button><i class="bi bi-arrow-right"></i></button>
+                        <button id="prev-testimonial-btn"><i class="bi bi-arrow-left"></i></button>
+                        <button id="next-testimonial-btn"><i class="bi bi-arrow-right"></i></button>
                     </div>
                 </div>
                 <ul class="testimonials-list">
-                    <li class="testimonial group">
-                        <div class="image-container">
-                            <img src="./assets/images/Adobe Express - file (3).png" alt="Image of a doctor">
-                        </div>
-                        <div class="text">
-                            <div class="staff-details">
-                                <h4>Maxine Whiteside</h4>
-                                <p>Director of Information Systems <br />Commonwealth Pain and Spine</p>
+                    <li class="testimonial-container group">
+                        <div class="testimonial">
+                            <div class="image-container">
+                                <img src="./assets/images/Adobe Express - file (3).png" alt="Image of a doctor">
                             </div>
-                            <span>Hear their story</span>
-                        </div>
-                    </li>
-                    <li class="testimonial">
-                        <i class="bi bi-quote"></i>
-                        <div class="quote">
-                            <p>I was able to close 300 charts in 3 days because of how streamlined and easy charting is with [lunaOne].</p>
-                        </div>
-                        <img class="company-logo" src="./assets/images/company-logo.webp" alt="company logo" />
-                    </li>
-                    <li class="testimonial group">
-                        <span class="background">
-                            <img src="./assets/images/Adobe Express - file (2).png" alt="Testimonial image" />
-                        </span>
-                        <div class="text">
-                            <div class="staff-details">
-                                <h4>Stephen Bradley</h4>
-                                <p>Asst. Director of IT <br />HeartPlace</p>
-                            </div>
-
-                            <span>
+                            <div class="text">
+                                <div class="staff-details">
+                                    <h4>Maxine Whiteside</h4>
+                                    <p>Director of Information Systems <br />Commonwealth Pain and Spine</p>
+                                </div>
                                 <span>Hear their story</span>
-                                <i class="bi bi-arrow-right-short"></i>
-                            </span>
+                            </div>
                         </div>
                     </li>
-                    <li class="testimonial">
-                        <i class="bi bi-quote"></i>
-                        <div class="quote">
-                            <p>Every aspect of lunaOne is superior, from the scheduling to billing to the reports we can pull.</p>
+                    <li class="testimonial-container">
+                        <div class="testimonial">
+                            <i class="bi bi-quote"></i>
+                            <div class="quote">
+                                <p>I was able to close 300 charts in 3 days because of how streamlined and easy charting is with [lunaOne].</p>
+                            </div>
+                            <img class="company-logo" src="./assets/images/company-logo.webp" alt="company logo" />
                         </div>
-                        <img class="company-logo" src="./assets/images/company-logo2.png" alt="company logo" />
+                    </li>
+                    <li class="testimonial-container group">
+                        <div class="testimonial">
+                            <span class="background">
+                                <img src="./assets/images/boss-lady.webp" alt="Testimonial image" />
+                            </span>
+                            <div class="text">
+                                <div class="staff-details">
+                                    <h4>Stephen Bradley</h4>
+                                    <p>Asst. Director of IT <br />HeartPlace</p>
+                                </div>
+
+                                <span>
+                                    <span>Hear their story</span>
+                                    <i class="bi bi-arrow-right-short"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="testimonial-container">
+                        <div class="testimonial">
+                            <i class="bi bi-quote"></i>
+                            <div class="quote">
+                                <p>Every aspect of lunaOne is superior, from the scheduling to billing to the reports we can pull.</p>
+                            </div>
+                            <img class="company-logo" src="./assets/images/company-logo2.png" alt="company logo" />
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -361,7 +384,7 @@
                 </form>
 
                 <ul class="nav-links">
-                    <li>
+                    <li class="links-container">
                         <h3>Company</h3>
                         <ul class="links">
                             <li><a class="active" href="/">Home</a></li>
@@ -370,7 +393,7 @@
                             <li><a href="/product">Solutions</a></li>
                         </ul>
                     </li>
-                    <li class="contact-us">
+                    <li class="links-contianer contact-us">
                         <h3>Contact Us</h3>
                         <ul class="links">
                             <li>
@@ -400,7 +423,7 @@
         <div class="section socials-section">
             <div class="content-container">
                 <div class="left">
-                    <a href="#" class="logo">
+                    <a href="/" class="logo">
                         <img src="./assets/icons/favicon-32x32.png" alt="Company logo" />
                         <span><b>luna</b>Health</span>
                     </a>

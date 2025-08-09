@@ -28,21 +28,36 @@
         <div class="desktop-header section">
             <nav class="nav-container content-container">
                 <div class="left">
-                    <a href="#" class="logo">
+                    <a href="/" class="logo">
                         <img src="../assets/icons/favicon-32x32.png" alt="Company logo" />
                         <span><b>luna</b>Health</span>
                     </a>
                     <ul class="nav-links">
-                        <li><a href="/">Home</a></li>
+                        <li><a class="active" href="/">Home</a></li>
                         <li><a href="/about">Who We Are</a></li>
-                        <li><a class="active" href="/product">Solutions</a></li>
+                        <li><a href="/product">Solutions</a></li>
                         <li><a href="/contact">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <div class="right">
-                    <a href="#" class="request-demo-btn">Schedule a meeting</a>
+                    <button class="request-demo-btn">Request a demo</button>
+                    <button id="menu-toggle-btn" class="toggle-mobile-header-btn">
+                        <i class="open-icon bi bi-list"></i>
+                        <i class="close-icon bi bi-x"></i>
+                    </button>
                 </div>
+            </nav>
+        </div>
+        <div id="mobile-header" class="mobile-header">
+            <nav class="container">
+                <ul class="nav-links">
+                    <li><a class="active" href="/">Home</a></li>
+                    <li><a href="/about">Who We Are</a></li>
+                    <li><a href="/product">Solutions</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+                <a class="cta-link" href="/contact">Request a demo</a>
             </nav>
         </div>
     </header>
@@ -289,16 +304,16 @@
                 </form>
 
                 <ul class="nav-links">
-                    <li>
+                    <li class="links-container">
                         <h3>Company</h3>
                         <ul class="links">
-                            <li><a href="/">Home</a></li>
+                            <li><a class="active" href="/">Home</a></li>
                             <li><a href="/about">Who we are</a></li>
                             <li><a href="/contact">Contact us</a></li>
-                            <li><a class="active" href="/product">Solutions</a></li>
+                            <li><a href="/product">Solutions</a></li>
                         </ul>
                     </li>
-                    <li class="contact-us">
+                    <li class="links-contianer contact-us">
                         <h3>Contact Us</h3>
                         <ul class="links">
                             <li>
@@ -328,7 +343,7 @@
         <div class="section socials-section">
             <div class="content-container">
                 <div class="left">
-                    <a href="#" class="logo">
+                    <a href="/" class="logo">
                         <img src="../assets/icons/favicon-32x32.png" alt="Company logo" />
                         <span><b>luna</b>Health</span>
                     </a>
