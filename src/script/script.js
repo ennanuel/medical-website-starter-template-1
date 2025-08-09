@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Cookie consent logic
+
     const cookieBanner = document.getElementById('cookie-banner');
     const acceptButton = document.getElementById('accept-cookies');
     const rejectButton = document.getElementById('reject-cookies');
@@ -39,4 +41,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     rejectButton.addEventListener('click', hideBanner);
+
+
+    // Mobile menu toggle logic
+
+    let mobileMenuIsOpen = false;
+    const toggleMenuBtn = document.getElementById('menu-toggle-btn');
+    const mobileHeader = document.getElementById('mobile-header');
+
+    toggleMenuBtn?.addEventListener('click', () => {
+        mobileMenuIsOpen = !mobileMenuIsOpen;
+        toggleMenuBtn?.classList?.toggle('active', mobileMenuIsOpen);
+        mobileHeader?.classList?.toggle('show', mobileMenuIsOpen);
+    });
+
+    // Testimonials navigation logic
+
+    let step = 1;
+    const nextTestimonialBtn = document.getElementById('next-testimonial-btn');
+    const prevTestimonialBtn = document.getElementById('prev-testimonial-btn');
+
+    function moveTestimonials (direction) {
+        const testimonials = document.getElementsByClassName('testimonial-container');
+
+        const canMoveTestimonials = direction && ((direction === 'left' && (step < testimonials.length)) || (direction === 'right' && step > 1));
+
+        if (!canMoveTestimonials) return;
+
+        step = direction === 'left' ? step + 1 : step - 1;
+
+        [...testimonials].forEach((testimonial) => {
+            testimonial.style.transform = `translateX(${100 * (1 - step)}%)`;
+        })
+    };
+
+    nextTestimonialBtn?.addEventListener('click', () => moveTestimonials('left'));
+    prevTestimonialBtn?.addEventListener('click', () => moveTestimonials('right'));
 });
