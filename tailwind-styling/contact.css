@@ -15,7 +15,7 @@
 }
 
 .hero .content-container {
-    @apply pt-24 flex justify-between gap-16;
+    @apply pt-24 flex flex-col md:flex-row justify-between gap-6 lg:gap-16;
 }
 
 .hero .content-container .left {
@@ -31,7 +31,7 @@
 }
 
 .hero .content-container .left .title-and-description h2 {
-    @apply text-6xl font-bold;
+    @apply text-4xl xs:text-5xl lg:text-6xl font-bold;
 }
 
 .hero .content-container .left .title-and-description p {
@@ -63,11 +63,11 @@
 }
 
 .hero .content-container .right form {
-    @apply -mb-24 p-10 w-full flex flex-col gap-6 bg-background rounded-2xl outline-2 outline-main-dark text-main-dark;
+    @apply -mb-40 md:-mb-24 p-6 lg:p-10 w-full flex flex-col gap-6 bg-background rounded-2xl outline-2 outline-main-dark text-main-dark;
 }
 
 .hero .content-container .right form .title {
-    @apply text-xl font-semibold text-main;
+    @apply text-lg xs:text-xl font-semibold text-main;
 }
 
 .hero .content-container .right form .fields-and-button {
@@ -105,7 +105,7 @@
 }
 
 .message-from-founder .founder-profile {
-    @apply w-fit py-12 flex flex-col gap-3;
+    @apply w-fit pt-60 pb-12 md:py-12 flex flex-col gap-3;
 }
 
 .message-from-founder .founder-profile .profile {
@@ -159,11 +159,11 @@
 }
 
 .offices .content-container ul {
-    @apply relative py-10 grid grid-cols-3 gap-8 before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:w-4/5 before:h-full before:rounded-2xl before:bg-main-light;
+    @apply relative py-10 grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8 before:absolute before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:w-[105%] md:before:w-4/5 before:h-4/5 md:before:h-full before:rounded-2xl before:bg-main-light;
 }
 
 .offices .content-container ul li {
-    @apply relative p-10 flex flex-col items-center justify-center rounded-xl border-2 border-main-dark bg-white;
+    @apply relative p-10 flex flex-col items-center justify-start text-center rounded-xl border md:border-2 border-main-dark bg-white;
 }
 
 .offices .content-container ul li .icon {
@@ -193,7 +193,7 @@
 }
 
 .faqs .content-container .title-and-description h2 {
-    @apply text-4xl font-semibold text-main-dark;
+    @apply text-2xl xs:text-3xl lg:text-4xl font-semibold text-main-dark;
 }
 
 .faqs .content-container .title-and-description p {
@@ -229,7 +229,7 @@
 }
 
 .faqs .content-container .questions-and-answers ul li button {
-    @apply w-full p-4 flex items-center justify-between gap-6 font-semibold text-main-dark;
+    @apply w-full p-4 flex items-center justify-between text-left gap-6 font-semibold text-main-dark;
 }
 
 .faqs .content-container .questions-and-answers ul li.active p {

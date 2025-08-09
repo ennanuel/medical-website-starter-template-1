@@ -12,19 +12,19 @@
 /* Hero Styling */
 
 .hero {
-    @apply bg-main text-background min-h-[calc(100dvh_-_80px)] pt-24 pb-10;
+    @apply flex bg-main text-background min-h-[calc(100dvh_-_80px)] pt-24 pb-10;
 }
 
 .hero .content-container {
-    @apply flex flex-col gap-12;
+    @apply flex-1 flex flex-col gap-12;
 }
 
 .hero .content-container .main-content {
-    @apply flex;
+    @apply flex-1 flex flex-col lg:flex-row justify-center lg:justify-start items-center gap-20 lg:gap-6
 }
 
 .hero .content-container .left {
-    @apply flex flex-1 flex-col justify-end;
+    @apply flex lg:flex-1 flex-col;
 }
 
 .hero .content-container .left .sub-title {
@@ -32,23 +32,23 @@
 }
 
 .hero .content-container .left .title {
-    @apply mt-2 text-6xl font-bold max-w-[24ch];
+    @apply mt-2 text-4xl xs:text-5xl lg:text-6xl font-bold max-w-[24ch];
 }
 
 .hero .content-container .left .description {
     @apply mt-8 text-base font-normal max-w-[56ch];
 }
 
+.hero .content-container .left a {
+    @apply mt-6 flex items-center justify-center w-fit gap-4 font-semibold text-sm;
+}
+
 .hero .content-container .right {
-    @apply flex-1 flex justify-end items-end;
+    @apply lg:flex-1 flex justify-end items-end;
 }
 
 .hero .content-container .right img {
     @apply w-full max-w-140 h-100 rounded-4xl rounded-br-lg;
-}
-
-.hero .content-container .scroll-down-content a {
-    @apply flex items-center justify-center w-fit gap-4 font-semibold text-sm;
 }
 
 /* Description Section Styling */
@@ -62,11 +62,11 @@
 }
 
 .description-section .content-container .title {
-    @apply text-3xl font-semibold text-main;
+    @apply text-2xl md:text-3xl font-semibold text-main max-w-[32ch] lg:max-w-none;
 }
 
 .description-section .content-container .description-and-values {
-    @apply mt-8 flex justify-between gap-10;
+    @apply mt-8 flex flex-col lg:flex-row justify-between gap-10;
 }
 
 .description-section .content-container .description-and-values .value {
@@ -82,7 +82,7 @@
 }
 
 .description-section .content-container .description-and-values .value ul li {
-    @apply flex gap-3 py-2 text-sm border-b last:border-b-0 border-main-light/40;
+    @apply max-w-[48ch] flex gap-3 py-2 text-sm border-b last:border-b-0 border-main-light/40;
 }
 
 .description-section .content-container .description-and-values .value ul li i {
@@ -101,7 +101,7 @@
 }
 
 .vision-and-mission .content-container .title-and-sub-title {
-    @apply flex flex-col items-center gap-2;
+    @apply flex flex-col text-center items-center gap-2;
 }
 
 .vision-and-mission .content-container .title-and-sub-title .sub-title {
@@ -113,11 +113,11 @@
 }
 
 .vision-and-mission .content-container .statements {
-    @apply mt-14 grid grid-cols-[4fr_3fr_4fr] gap-2;
+    @apply mt-14 grid grid-cols-1 md:grid-cols-[4fr_3fr_4fr] gap-2;
 }
 
 .vision-and-mission .content-container .statement {
-    @apply p-8 my-8 h-100 flex flex-col justify-center items-start gap-6 rounded-l-2xl rounded-r-md last:rounded-r-2xl last:rounded-l-md bg-main/30 text-main-dark last:bg-secondary/30 last:text-secondary-dark;
+    @apply p-6 md:p-8 md:my-8 min-h-80 md:h-100 flex flex-col justify-center items-start gap-6 rounded-tl-2xl rounded-tr-2xl md:rounded-tr-md rounded-bl-md md:rounded-bl-2xl rounded-br-md last:rounded-tl-md last:rounded-tr-md md:last:rounded-tr-2xl last:rounded-bl-2xl md:last:rounded-bl-md last:rounded-br-2xl bg-main/30 text-main-dark last:bg-secondary/30 last:text-secondary-dark;
 }
 
 .vision-and-mission .content-container .statement h3 {
@@ -135,7 +135,7 @@
 }
 
 .contact .content-container {
-    @apply flex flex-col items-center justify-center gap-12 bg-gradient-to-br from-main to-main-dark text-background rounded-2xl py-20  px-10;
+    @apply flex flex-col items-center justify-center gap-12 min-h-160 md:min-h-auto bg-gradient-to-br from-main to-main-dark text-background rounded-2xl py-20  px-10;
 }
 
 .contact .content-container .title-and-description {
@@ -143,7 +143,7 @@
 }
 
 .contact .content-container .title-and-description h3 {
-    @apply text-6xl font-bold;
+    @apply text-4xl xs:text-5xl lg:text-6xl font-bold;
 }
 
 .contact .content-container .title-and-description p {

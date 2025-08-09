@@ -29,7 +29,7 @@
 }
 
 .hero .content-container .title-and-description  h1 {
-    @apply text-6xl font-bold w-full max-w-[16ch];
+    @apply text-4xl xs:text-5xl lg:text-6xl font-bold w-full max-w-[16ch];
 }
 
 .hero .content-container .title-and-description  p {
@@ -37,11 +37,11 @@
 }
 
 .hero .content-container .cta-btns {
-    @apply flex items-center justify-center gap-2
+    @apply flex flex-wrap items-center justify-center gap-2
 }
 
 .hero .content-container .cta-btns a {
-    @apply h-12 w-fit px-8 rounded-full flex items-center justify-center border border-main-light bg-main-light text-main font-semibold text-sm last:text-main-light last:bg-transparent;
+    @apply h-12 w-fit px-8 rounded-full flex items-center justify-center border border-main-light bg-main-light text-main font-semibold text-sm whitespace-nowrap last:text-main-light last:bg-transparent;
 }
 
 .services {
@@ -49,7 +49,7 @@
 }
 
 .services .content-container {
-    @apply pb-20 flex flex-col gap-10;
+    @apply pt-6 md:pt-0 pb-20 flex flex-col gap-10;
 }
 
 .services .content-container .title-and-description {
@@ -65,11 +65,11 @@
 }
 
 .services .content-container ul {
-    @apply grid grid-cols-3 gap-3;
+    @apply grid grid-cols-1 md:grid-cols-3 gap-3;
 }
 
 .services .content-container ul li {
-    @apply flex flex-col gap-3 p-6 rounded-4xl border border-main/30;
+    @apply flex flex-col gap-3 p-6 rounded-2xl md:rounded-4xl border border-main/30;
 }
 
 .services .content-container i {
@@ -91,7 +91,7 @@
 }
 
 .selling-points .content-container {
-    @apply pt-30 pb-20 flex gap-16;
+    @apply pt-30 pb-20 flex flex-col md:flex-row gap-24 md:gap-12 lg:gap-16;
 }
 
 .selling-points .content-container .points {
@@ -144,8 +144,12 @@
 
 /* Additional Selling Points Styling */
 
+.additional-selling-points {
+    @apply overflow-hidden;
+}
+
 .additional-selling-points .content-container {
-    @apply pt-24 pb-24;
+    @apply py-24;
 }
 
 .additional-selling-points .content-container .title-and-sub-title {
@@ -165,11 +169,11 @@
 }
 
 .additional-selling-points .content-container .images-and-text .images {
-    @apply flex justify-center items-center gap-3;
+    @apply flex justify-center items-center gap-1 xs:gap-2 md:gap-3;
 }
 
 .additional-selling-points .content-container .images-and-text .images img {
-    @apply flex-1 max-w-100 rounded-lg h-100 object-cover odd:max-w-60 odd:h-90;
+    @apply w-full max-w-100 rounded-lg h-100 object-cover odd:max-w-60 odd:h-90;
 }
 
 .additional-selling-points .content-container .images-and-text p {
@@ -179,11 +183,11 @@
 /* Success Points Styling */
 
 .success-points {
-    @apply py-20;
+    @apply py-20 px-0 md:px-10;
 }
 
 .success-points .content-container {
-    @apply relative max-w-[calc(var(--max-width-desktop)_+_160px)] p-20 rounded-4xl text-background flex justify-between gap-10 bg-[url(../assets/images/natali-hordiiuk-JxsdF5oc3zY-unsplash.jpg)] overflow-hidden before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-main-dark/50;
+    @apply relative max-w-[calc(var(--max-width-desktop)_+_160px)] px-4 xs:px-6 py-14 md:p-10 lg:p-20 md:rounded-4xl text-background flex flex-col md:flex-row justify-between gap-10 bg-[url(../assets/images/natali-hordiiuk-JxsdF5oc3zY-unsplash.jpg)] overflow-hidden before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-main-dark/50;
 }
 
 .success-points .content-container .left {
@@ -199,7 +203,7 @@
 }
 
 .success-points .content-container .left .title-and-description h2 {
-    @apply text-4xl font-bold max-w-[16ch];
+    @apply text-2xl xs:text-3xl md:text-4xl font-bold max-w-[16ch];
 }
 
 .success-points .content-container .left .title-and-description p {
@@ -215,7 +219,7 @@
 }
 
 .success-points .content-container .right li {
-    @apply flex gap-4 p-6 rounded-2xl border border-main-light/20 bg-main/10 backdrop-blur;
+    @apply flex gap-4 px-4 py-6 md:p-6 rounded-2xl border border-main-light/20 bg-main/10 backdrop-blur;
 }
 
 .success-points .content-container .right li .icon {
@@ -315,13 +319,13 @@
 }
 
 .cta-section .content-container .title-and-sub-title h2 {
-    @apply text-[6rem] font-bold text-main-light;
+    @apply text-[5rem] mt-6 mb-4 md:my-0 md:text-[6rem] font-bold text-main-light;
 }
 
 .cta-section .content-container .cta-btns {
-    @apply flex items-center justify-center gap-4;
+    @apply flex items-center flex-wrap justify-center gap-4;
 }
 
 .cta-section .content-container .cta-btns a {
-    @apply relative h-12 flex items-center justify-center px-6 rounded-full border border-main-light text-background text-sm font-semibold last:bg-main-light last:text-main-dark;
+    @apply relative h-12 flex items-center justify-center px-6 rounded-full border border-main-light text-background text-sm font-semibold whitespace-nowrap last:bg-main-light last:text-main-dark;
 }

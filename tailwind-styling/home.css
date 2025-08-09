@@ -12,15 +12,15 @@
 /* Hero Section Styling */
 
 .hero {
-    @apply overflow-hidden min-h-[calc(100dvh_-_80px)] px-10 flex flex-col bg-gradient-to-b from-main to-main-dark text-background;
+    @apply overflow-hidden min-h-[calc(100dvh_-_80px)] px-4 xs:px-6 md:px-10 flex flex-col bg-gradient-to-b from-main to-main-dark text-background;
 }
 
 .hero .container {
-    @apply relative flex-1 flex gap-10;
+    @apply relative flex-1 flex flex-col lg:flex-row gap-10;
 }
 
 .hero .container .left {
-    @apply relative flex-1 py-20 flex flex-col justify-end gap-20;
+    @apply relative flex-1 py-20 flex flex-col justify-center md:justify-end gap-20;
 }
 
 .hero .container .left .write-up {
@@ -32,7 +32,7 @@
 }
 
 .hero .container .left .write-up h1 {
-    @apply text-6xl font-bold max-w-[16ch] text-background;
+    @apply text-5xl lg:text-6xl font-bold max-w-[16ch] text-background;
 }
 
 .hero .container .left .write-up p {
@@ -40,7 +40,7 @@
 }
 
 .hero .container .left .cta-btns {
-    @apply flex items-center gap-4;
+    @apply flex flex-wrap items-center gap-4;
 }
 
 .hero .container .left .cta-btns .cta {
@@ -52,11 +52,11 @@
 }
 
 .hero .container .right {
-    @apply flex-1 relative flex;
+    @apply flex-1 hidden md:flex items-end justify-center lg:justify-end;
 }
 
 .hero .container .right .images {
-    @apply absolute bottom-0 right-0 w-fit h-full before:absolute before:bottom-16 before:left-0 before:w-full before:aspect-square before:rounded-full before:bg-main before:blur-[160px] before:scale-125 after:z-0 after:absolute after:bottom-16 after:left-0 after:w-full after:aspect-square after:rounded-full after:bg-secondary;
+    @apply relative bottom-0 right-0 w-full max-w-100 h-auto before:absolute before:bottom-10 before:left-1/2 before:-translate-x-1/2 before:w-[110%] before:aspect-square before:rounded-full before:bg-main before:blur-[160px] before:scale-125 after:z-0 after:absolute after:bottom-10 after:left-1/2 after:-translate-x-1/2 after:w-[110%] after:aspect-square after:rounded-full after:bg-secondary;
 }
 
 .hero .container .right .images img {
@@ -68,19 +68,19 @@
 }
 
 .hero .container .right .images .decoration:nth-child(1) {
-    @apply bottom-80 left-0;
+    @apply bottom-100 -left-4;
 }
 
 .hero .container .right .images .decoration:nth-child(2) {
-    @apply bottom-10 left-10 w-14 text-xl;
+    @apply bottom-12 left-6 w-14 text-xl;
 }
 
 .hero .container .right .images .decoration:nth-child(3) {
-    @apply bottom-50 -right-6 w-16 text-2xl;
+    @apply bottom-50 -right-10 w-16 text-2xl;
 }
 
 .short-info {
-    @apply px-10 bg-main-light text-main-dark;
+    @apply px-4 xs:px-6 md:px-10 bg-main-light text-main-dark;
 }
 
 .short-info .info-container {
@@ -88,7 +88,7 @@
 }
 
 .short-info .info-container h3 {
-    @apply text-2xl font-semibold;
+    @apply text-lg xs:text-xl md:text-2xl text-center font-semibold;
 }
 
 .short-info .info-container a {
@@ -96,13 +96,13 @@
 }
 
 .short-info .info-container a i {
-    @apply text-2xl
+    @apply text-xl md:text-2xl
 }
 
 /* More Details Styling */
 
 .more-details {
-    @apply px-10;
+    @apply px-4 xs:px-6 md:px-10;
 }
 
 .more-details .container {
@@ -110,7 +110,7 @@
 }
 
 .more-details .container .write-up {
-    @apply grid grid-cols-2 gap-6;
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
 }
 
 .more-details .container .write-up .titles {
@@ -122,7 +122,7 @@
 }
 
 .more-details .container .write-up .titles h2 {
-    @apply text-5xl font-semibold text-main-dark;
+    @apply text-4xl lg:text-5xl font-semibold text-main-dark;
 }
 
 .more-details .container .write-up .description {
@@ -134,7 +134,7 @@
 }
 
 .more-details .container .solutions {
-    @apply grid grid-cols-2 gap-6 mt-20;
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6 mt-20;
 }
 
 .more-details .container .solutions li {
@@ -150,7 +150,7 @@
 }
 
 .more-details .container .solutions a .text {
-    @apply p-8 flex flex-col justify-between gap-8;
+    @apply p-6 md:p-8 flex flex-col justify-between gap-8;
 }
 
 .more-details .container .solutions a .text .titles {
@@ -162,7 +162,7 @@
 }
 
 .more-details .container .solutions a .text .titles p {
-    @apply text-3xl font-semibold text-main-dark;
+    @apply text-xl lg:text-3xl font-semibold text-main-dark;
 }
 
 .more-details .container .solutions a .text span {
@@ -172,15 +172,15 @@
 /* Features Section Styling */
 
 .features .container {
-    @apply grid grid-cols-2 gap-6 pb-24;
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6 pb-24;
 }
 
 .features .container .title h2 {
-    @apply sticky top-16 pt-10 text-4xl font-semibold text-main-dark;
+    @apply sticky top-16 pt-10 text-3xl lg:text-4xl font-semibold text-main-dark;
 }
 
 .features .container .features-list {
-    @apply pt-40 flex flex-col gap-8
+    @apply pt-20 md:pt-40 flex flex-col gap-8
 }
 
 .features .container .features-list li {
@@ -188,19 +188,19 @@
 }
 
 .features .container .features-list li a {
-    @apply flex-1 flex flex-col;
+    @apply flex-1 flex flex-col gap-6 md:gap-0 p-2 md:p-0 rounded-3xl md:rounded-none bg-main-light md:bg-transparent;
 }
 
 .features .container .features-list li a .image-container {
-    @apply relative mx-8 h-80 object-cover;
+    @apply relative md:mx-8 h-60 lg:h-80 object-cover;
 }
 
 .features .container .features-list li a .image-container img {
-    @apply w-full h-full object-cover rounded-2xl border-3 border-main-light;
+    @apply w-full h-full object-cover rounded-2xl md:border-3 border-main-light;
 }
 
 .features .container .features-list li a .text {
-    @apply -mt-14 pt-24 p-8 pb-10 flex flex-col justify-between gap-8 rounded-3xl bg-main-light;
+    @apply md:-mt-14 md:pt-24 p-4 md:p-8 md:pb-10 flex flex-col justify-between gap-8 rounded-3xl bg-main-light;
 }
 
 .features .container .features-list li a .text .titles {
@@ -208,7 +208,7 @@
 }
 
 .features .container .features-list li a .text .titles h3 {
-    @apply text-4xl font-semibold text-main-dark;
+    @apply text-2xl lg:text-4xl font-semibold text-main-dark;
 }
 
 .features .container .features-list li a .text .see-more-link {
@@ -234,39 +234,39 @@
 /* Testimonials Section Styling */
 
 .testimonials {
-    @apply px-10 py-24;
+    @apply px-0 md:px-10 md:py-24;
 }
 
 .testimonials .container {
-    @apply max-w-[1320px] p-10 mx-auto w-full bg-main-dark overflow-hidden text-background rounded-[40px];
+    @apply max-w-[1320px] pt-20 pb-12 xs:py-20 p-4 xs:p-6 md:py-10 md:p-10 mx-auto w-full bg-main-dark overflow-hidden text-background rounded-none md:rounded-[40px];
 }
 
 .testimonials .container .title-and-controls {
-    @apply flex items-start justify-between gap-6;
+    @apply flex items-start justify-between gap-4 md:gap-6;
 }
 
 .testimonials .container .title-and-controls h2 {
-    @apply text-4xl font-bold;
+    @apply text-2xl md:text-3xl lg:text-4xl font-semibold lg:font-bold;
 }
 
 .testimonials .container .title-and-controls .controls {
-    @apply flex items-center gap-6;
+    @apply flex items-center gap-2 md:gap-6;
 }
 
 .testimonials .container .title-and-controls .controls button {
-    @apply w-14 aspect-square rounded-full flex items-center justify-center border-3 border-main-light text-[1.6rem] text-main-light hover:bg-main-light hover:text-main-dark;
+    @apply w-10 md:w-14 aspect-square rounded-full flex items-center justify-center border xs:border-2 md:border-3 border-main-light text-xl md:text-[1.6rem] text-main-light lg:hover:bg-main-light lg:hover:text-main-dark active:bg-main-light active:text-main-dark active:scale-90 transition-transform duration-300;
 }
 
 .testimonials .container .testimonials-list {
-    @apply mt-10 flex gap-5;
+    @apply mt-10 flex;
 }
 
 .testimonials .container .testimonials-list li {
-    @apply relative p-6 min-w-90 min-h-124 rounded-3xl bg-gradient-to-b from-main/10 to-main/80 overflow-hidden;
+    @apply flex pr-5 min-w-85 md:min-w-95 min-h-124 transition-transform duration-300 ease-expo;
 }
 
 .testimonials .container .testimonials-list .testimonial {
-    @apply flex flex-col gap-6;
+    @apply relative p-4 md:p-6 flex-1 flex flex-col gap-6 rounded-3xl bg-gradient-to-b from-main/10 to-main/80 overflow-hidden;
 }
 
 .testimonials .container .testimonials-list .testimonial .image-container {
@@ -340,7 +340,7 @@
 }
 
 .cta-section .container .title-and-description .title {
-    @apply text-4xl font-semibold text-main-dark;
+    @apply text-3xl md:text-4xl font-semibold text-main-dark;
 }
 
 .cta-section .container .title-and-description p {
@@ -348,11 +348,11 @@
 }
 
 .cta-section .container .actions {
-    @apply mt-12 grid grid-cols-[3fr_2fr] gap-6;
+    @apply mt-12 grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6;
 }
 
 .cta-section .container .actions .action {
-    @apply p-6 rounded-xl border-2 border-main-dark/50 bg-background flex flex-col gap-10;
+    @apply p-6 rounded-xl border-2 border-main-dark/40 bg-background flex flex-col gap-10;
 }
 
 .cta-section .container .actions .action .icon {
@@ -364,7 +364,7 @@
 }
 
 .cta-section .container .actions .action .text .titles h3 {
-    @apply text-2xl font-semibold text-main-dark;
+    @apply text-lg xs:text-xl lg:text-2xl font-semibold text-main-dark;
 }
 
 .cta-section .container .actions .action .text .titles p {
@@ -376,7 +376,7 @@
 }
 
 .cta-section .container .actions .action .text a {
-    @apply h-12 w-fit flex items-center justify-center px-8 rounded-full border-2 border-main-dark/50 text-main-dark hover:bg-main hover:border-main hover:text-background text-sm font-semibold;
+    @apply h-12 w-fit flex items-center justify-center px-6 sm:px-8 rounded-full border-2 border-main-dark/50 text-main-dark hover:bg-main hover:border-main hover:text-background text-sm font-semibold;
 }
 
 .cta-section .container .extra-details {
